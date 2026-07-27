@@ -164,6 +164,7 @@ ECU基础配置，转发表通信配置，这两个标签页，是固定配置�
 校验规则：
 - 同工程同ECU下的CAN、LIN、ETH接口名称不可重复
 - 同工程同ECU下的CanInterface中的channelId不可重复，大于等于0的整数
+- 同工程同ECU下的接口port不可重复，大于等于0的整数
 -  CAN接口类型必须在枚举定义范围内
 - CAN接口连接类型必须在枚举定义范围内
 
@@ -178,9 +179,11 @@ ECU基础配置，转发表通信配置，这两个标签页，是固定配置�
 | ------- | ------------- | ------ |
 | LIN接口名称 | interfaceName | 是      |
 | 接口通道ID  | channelId     | 是      |
+| 端口号     | port          | 是      |
 校验规则：
 - 同工程同ECU下的CAN、LIN、ETH接口名称不可重复
 - 同工程同ECU下的LinInterface中的channelId不可重复，大于等于0的整数
+- 同工程同ECU下的接口port不可重复，大于等于0的整数
 
 #### 6）EthInterface extends Interface
 
@@ -190,11 +193,17 @@ ECU基础配置，转发表通信配置，这两个标签页，是固定配置�
 
 对应前端表单：Eth接口配置
 
-| 名称      | 对应字段          | 是否必填校验 | 其他校验规则                                        |
-| ------- | ------------- | ------ | --------------------------------------------- |
-| LIN接口名称 | interfaceName | 必填     | 同工程同ECU下的CAN、LIN、ETH接口名称不可重复                  |
-| 接口通道ID  | channelId     | 必填     | 同工程同ECU下的LinInterface中的channelId不可重复，大于等于0的整数 |
-
+| 名称      | 对应字段          | 是否必填 |
+| ------- | ------------- | ---- |
+| ETH接口名称 | interfaceName | 是    |
+| 接口通道ID  | channelId     | 是    |
+| 端口号     | port          | 是    |
+| ETH接口类型 | type          | 是    |
+校验规则：
+- 同工程同ECU下的CAN、LIN、ETH接口名称不可重复
+- 同工程同ECU下的EthInterface中的channelId不可重复，大于等于0的整数
+- 同工程同ECU下的接口port不可重复，大于等于0的整数
+- ETH接口类型需要在枚举范围中
 ## 3. CAN/LIN通信配置
 
 进入工程后，左侧菜单需要有 `CAN/LIN通信` 配置按钮
