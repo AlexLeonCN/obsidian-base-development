@@ -44,7 +44,7 @@
 
 | 字段   | 类型     | 含义   |
 | ---- | ------ | ---- |
-| id   | Long   | 主键ID |
+| id   | String | 主键ID |
 | name | String | 工程名称 |
 | desc | String | 描述   |
 
@@ -85,8 +85,8 @@ ECU基础配置，转发表通信配置，这两个标签页，是固定配置�
 
 | 字段        | 类型      | 含义      |
 | --------- | ------- | ------- |
-| id        | Long    | 主键ID    |
-| projectId | Long    | 关联的工程ID |
+| id        | String  | 主键ID    |
+| projectId | String  | 关联的工程ID |
 | name      | String  | ECU设备名称 |
 | desc      | String  | 描述      |
 | mac       | String  | MAC地址   |
@@ -117,9 +117,9 @@ ECU基础配置，转发表通信配置，这两个标签页，是固定配置�
 
 | 字段                       | 类型     | 含义             |
 | ------------------------ | ------ | -------------- |
-| id                       | Long   | 主键ID           |
-| projectId                | Long   | 关联的工程ID        |
-| ecuId                    | Long   | 关联的ECU 设备ID    |
+| id                       | String | 主键ID           |
+| projectId                | String | 关联的工程ID        |
+| ecuId                    | String | 关联的ECU 设备ID    |
 | pFlashMemoryStartAddress | String | pFlash空间起始地址   |
 | pFlashMemorySizeLimit    | String | pFlash空间编排大小限制 |
 | ramMemoryStartAddress    | String | RAM空间起始地址      |
@@ -141,9 +141,9 @@ ECU基础配置，转发表通信配置，这两个标签页，是固定配置�
 
 | 字段            | 类型      | 含义          |
 | ------------- | ------- | ----------- |
-| id            | Long    | 主键ID        |
-| projectId     | Long    | 关联的工程ID     |
-| ecuId         | Long    | 关联的ECU 设备ID |
+| id            | String  | 主键ID        |
+| projectId     | String  | 关联的工程ID     |
+| ecuId         | String  | 关联的ECU 设备ID |
 | interfaceName | String  | CAN接口名称     |
 | channelId     | Integer | 接口通道ID      |
 | port          | Integer | 端口号         |
